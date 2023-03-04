@@ -1,9 +1,12 @@
-let gridSize = 16;
+let gridSize = gridSelector.value;
 let currentColor = '#000000';
+
+function gridMaker(gridSize) {
 for (let i = 0; i < gridSize * gridSize; i++) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
-    cell.id = `cell${i+1}`;    document.getElementById('grid').appendChild(cell);
+    cell.id = `cell${i+1}`;
+    document.getElementById('grid').appendChild(cell);
 }
 
 let columns = '';
@@ -13,8 +16,8 @@ for (let i = 0; i < gridSize; i++) {
 }
 
 document.getElementById('grid').style.gridTemplateColumns = `${columns}`
-
-
+}
+gridMaker(gridSize);
 document.getElementById('colorPicker').addEventListener('change', function(e) {currentColor = e.target.value;})
 
 
@@ -26,6 +29,6 @@ allCells.forEach(cell => {
 } )
 })
 
-
+gridSelector.addEventListener('change', function () {location.reload()})
 
 
