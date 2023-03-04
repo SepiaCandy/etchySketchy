@@ -1,0 +1,27 @@
+.grid {
+    display: grid;
+    width: 80vh;
+    aspect-ratio: 1/1;
+    background: rgb(255, 255, 255);
+    margin: 30px;
+}
+
+.cell {
+    
+    aspect-ratio: 1/1;
+    max-width: 60px;
+
+}
+
+.flexContainer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
